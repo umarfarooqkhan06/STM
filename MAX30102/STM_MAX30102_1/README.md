@@ -4,9 +4,13 @@ This folder mirrors the layout of a CubeIDE project so you can drop the
 files directly into the project you already generated (PB8 = SCL, PB9 = SDA,
 PA0 = INT).  Only the application-specific sources are included – keep the
 HAL, CMSIS, startup, linker and `.ioc` files that CubeMX created for your
-board.  **Do not replace your CubeMX-generated `Drivers` directory with the
-placeholder contained here**; it exists only to preserve the folder structure
-in git.
+//<<<<<<< codex/explore-repository-contents-yvk3p2
+//board.  **Do not replace your CubeMX-generated `Drivers` directory with the
+//placeholder contained here**; it exists only to preserve the folder structure
+//in git.
+//=======
+//board.
+//>>>>>>> main
 
 ```
 STM_MAX30102_1/
@@ -30,14 +34,22 @@ STM_MAX30102_1/
 ├── Core/Startup/
 │   └── startup_placeholder.txt
 └── Drivers/
+//<<<<<<< codex/explore-repository-contents-yvk3p2
     └── README.md  ← reminder to keep the CubeMX HAL/CMSIS content
+=======
+    └── placeholder.txt
+//>>>>>>> main
 ```
 
 > ⚠️ Keep the HAL/CMSIS drivers, startup assembly, linker script and `.ioc`
 > that CubeMX produced.  This repository only supplies the user code that you
+//<<<<<<< codex/explore-repository-contents-yvk3p2
 > replace or add under the **Core** tree.  If those drivers disappear you'll
 > see build errors such as `fatal error: stm32f4xx_hal_i2c.h: No such file or
 > directory` – restore the CubeMX `Drivers` folder in that case.
+=======
+> replace or add under the **Core** tree.
+//>>>>>>> main
 
 ## Integration steps
 
@@ -49,9 +61,13 @@ STM_MAX30102_1/
    and peripheral init files (`gpio.c`, `i2c.c`, `usart.c`, `stm32f4xx_hal_msp.c`).
    Adjust `SystemClock_Config` if your board uses a different clock source.
 3. Keep the rest of the Cube-generated artifacts (HAL drivers, startup, linker
+//<<<<<<< codex/explore-repository-contents-yvk3p2
    scripts, etc.).  The new `stm32f4xx_hal_conf.h` in this folder matches the
    modules used by the example, but you can retain your auto-generated copy if
    it already enables I2C/UART/GPIO.
+=======
+   scripts, etc.).
+//>>>>>>> main
 4. Build and flash from CubeIDE.  The example streams formatted heart-rate,
    SpO₂ and die-temperature values over `USART2` every time a beat is detected.
 

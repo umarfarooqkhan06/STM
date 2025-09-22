@@ -1,2 +1,6 @@
-This file exists so git keeps the Drivers/ folder. Do not delete your actual
-CubeMX-generated driver sources when integrating this example.
+//<<<<<<< codex/explore-repository-contents-yvk3p2
+//This file exists so git keeps the Drivers/ folder. Do not delete your actual
+//CubeMX-generated driver sources when integrating this example.
+//=======
+//CubeMX-generated HAL and CMSIS drivers stay in this folder in your project.
+//>>>>>>> main
