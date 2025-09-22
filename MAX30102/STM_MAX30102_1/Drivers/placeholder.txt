@@ -1,0 +1,1 @@
+CubeMX-generated HAL and CMSIS drivers stay in this folder in your project.
